@@ -13,7 +13,7 @@ client.on("messageDelete", message => {
     if (message.author.bot || !message.content) {
         return;
     } else {
-        bot.snipes.set(message.channel.id, {
+           <client>.snipes.set(message.channel.id, {
             content: message.content,
             author: message.author,
             timestamp: message.createdAt
