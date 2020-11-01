@@ -6,6 +6,23 @@ Go to your main file (usually `index.js` or `bot.js` and the following code:
 
 - Note: Replace `<client>` with your client variable (usually `client` or `bot`).
 
+## Event
+We will also need to be *setting* the snipe values. Add this code to your main file:
+```js
+client.on("messageDelete", message => {
+    if (message.author.bot || !message.content) {
+        return;
+    } else {
+        bot.snipes.set(message.channel.id, {
+            content: message.content,
+            author: message.author,
+            timestamp: message.createdAt
+        })
+    }
+})
+
+```
+
 ## Snipe command code:
 ```js
        try {
