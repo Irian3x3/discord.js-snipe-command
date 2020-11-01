@@ -1,4 +1,4 @@
-## About `client.snipes`
+## About `<client>.snipes`
 Go to your main file (usually `index.js` or `bot.js` and the following code:
 ```js
 <client>.snipes = new Discord.Collection();
